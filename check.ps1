@@ -11,7 +11,7 @@ Write-Host "Checking for updates installed today..."
 $updates = Get-WUHistory -Last 30 | Where-Object { $_.Date -ge (Get-Date).Date } | Select-Object Title, Date
 if ($updates) {
     Write-Host "Updates installed today:"
-    $updates
+    $updates | Format-Table -AutoSize
 } else {
     Write-Host "No updates installed today."
 }
