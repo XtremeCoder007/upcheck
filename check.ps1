@@ -1,5 +1,3 @@
-$executionPolicy = Get-ExecutionPolicy
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
 if (-not (Get-Module -ListAvailable -Name PSWindowsUpdate)) {
     Write-Host "PSWindowsUpdate module not found. Installing PSWindowsUpdate module..."
     Install-Module -Name PSWindowsUpdate -Force -Scope CurrentUser
